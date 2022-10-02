@@ -7,15 +7,20 @@ import lombok.NoArgsConstructor;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class StudentDto {
+public class CreateStudentDto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String registry;
+    private Integer registry;
+    @NotBlank(message = "Name field cannot be empty")
     private String name;
+    @NotBlank(message = "CPF field cannot be empty")
+    private String cpf;
+    @NotBlank(message = "Email field cannot be empty")
     private String email;
 }
