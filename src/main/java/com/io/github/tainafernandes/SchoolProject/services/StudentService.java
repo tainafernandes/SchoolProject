@@ -1,6 +1,7 @@
 package com.io.github.tainafernandes.SchoolProject.services;
 
 import com.io.github.tainafernandes.SchoolProject.dto.CreateStudentDto;
+import com.io.github.tainafernandes.SchoolProject.dto.UpdateStudentDto;
 import com.io.github.tainafernandes.SchoolProject.entity.Student;
 import com.io.github.tainafernandes.SchoolProject.repositories.StudentRepository;
 import lombok.RequiredArgsConstructor;
@@ -30,5 +31,9 @@ public class StudentService {
         student.setCpf(createDTO.getCpf());
         student.setEmail(createDTO.getEmail());
         return repository.save(student);
+    }
+
+    public Student update(UpdateStudentDto updateDto) {
+
     }
 }

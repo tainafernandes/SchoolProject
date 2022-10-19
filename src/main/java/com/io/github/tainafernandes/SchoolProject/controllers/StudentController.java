@@ -1,6 +1,7 @@
 package com.io.github.tainafernandes.SchoolProject.controllers;
 
 import com.io.github.tainafernandes.SchoolProject.dto.CreateStudentDto;
+import com.io.github.tainafernandes.SchoolProject.dto.UpdateStudentDto;
 import com.io.github.tainafernandes.SchoolProject.entity.Student;
 import com.io.github.tainafernandes.SchoolProject.services.StudentService;
 import lombok.RequiredArgsConstructor;
@@ -32,5 +33,8 @@ public class StudentController {
         return ResponseEntity.ok(service.create(createDTO));
     }
 
-
+    @PutMapping(value = "{id}")
+    public ResponseEntity update (@RequestBody @Valid UpdateStudentDto updateDto){
+        return ResponseEntity.ok(service.update(updateDto));
+    }
 }
