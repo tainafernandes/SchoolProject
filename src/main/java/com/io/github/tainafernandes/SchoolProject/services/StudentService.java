@@ -5,7 +5,10 @@ import com.io.github.tainafernandes.SchoolProject.dto.UpdateStudentDto;
 import com.io.github.tainafernandes.SchoolProject.entity.Student;
 import com.io.github.tainafernandes.SchoolProject.repositories.StudentRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Optional;
@@ -41,4 +44,9 @@ public class StudentService {
         return repository.save(student);
     }
 
+    public void delete(Long id) {
+        Optional<Student> studentOptional = repository.findById(id);
+        studentOptional.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Student does not exist"));
+        repository.deleteById(id);
+    }
 }
