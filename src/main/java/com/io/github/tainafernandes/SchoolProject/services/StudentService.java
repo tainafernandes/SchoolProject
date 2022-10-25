@@ -33,7 +33,12 @@ public class StudentService {
         return repository.save(student);
     }
 
-    public Student update(UpdateStudentDto updateDto) {
-
+    public Object update(UpdateStudentDto updateDto) {
+        Student student = new Student();
+        student.setRegistry(updateDto.getRegistry());
+        student.setName(updateDto.getName());
+        student.setEmail(updateDto.getEmail());
+        return repository.save(student);
     }
+
 }
