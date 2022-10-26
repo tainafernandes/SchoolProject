@@ -36,11 +36,18 @@ public class StudentService {
         return repository.save(student);
     }
 
-    public Object update(UpdateStudentDto updateDto) {
-        Student student = new Student();
+    public Object update(UpdateStudentDto updateDto, Long id) {
+        Optional<Student> studentOptional = repository.findById(id);
+
+        if(!studentOptional.isPresent()){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Student not found!");
+        }
+
+        Student student = studentOptional.get();
         student.setRegistry(updateDto.getRegistry());
         student.setName(updateDto.getName());
         student.setEmail(updateDto.getEmail());
+
         return repository.save(student);
     }
 

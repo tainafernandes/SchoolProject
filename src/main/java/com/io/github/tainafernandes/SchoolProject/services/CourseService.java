@@ -31,9 +31,16 @@ public class CourseService {
         return repository.save(course);
     }
 
-    public Object update(CourseDto courseDto) {
-        Course course = new Course();
+    public Object update(CourseDto courseDto, Long id) {
+        Optional<Course> courseOptional = repository.findById(id);
+
+        if(!courseOptional.isPresent()){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Course not found!");
+        }
+
+        Course course = courseOptional.get();
         course.setName(courseDto.getName());
+
         return repository.save(course);
     }
 

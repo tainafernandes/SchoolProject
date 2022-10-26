@@ -36,8 +36,8 @@ public class CourseController {
     }
 
     @PutMapping(value = "{id}")
-    public ResponseEntity update (@RequestBody @Valid CourseDto courseDto){
-        return ResponseEntity.ok(service.update(courseDto));
+    public ResponseEntity update (@PathVariable("id")Long id, @RequestBody @Valid CourseDto courseDto){
+        return ResponseEntity.ok(service.update(courseDto, id));
     }
 
     @DeleteMapping(value = "{id}")
