@@ -11,3 +11,13 @@ Qsrc/main/java/com/io/github/tainafernandes/SchoolProject/entity/Registration.ja
 \src/main/java/com/io/github/tainafernandes/SchoolProject/repositories/StudentRepository.java,9\5\958b145f12339f3942f7149f60aaaaac842fffd3
 ‹
 [src/main/java/com/io/github/tainafernandes/SchoolProject/repositories/CourseRepository.java,4\7\4747e73f508babd2360e0c78f914f505cfdcd556
+{
+Ksrc/main/java/com/io/github/tainafernandes/SchoolProject/dto/CourseDto.java,e\9\e952e2e14c971e0adb2f4277de5003e4fd1f1ea4
+‚
+Rsrc/main/java/com/io/github/tainafernandes/SchoolProject/dto/CreateStudentDto.java,9\e\9e11f4b362592da2d9eff1a1b80e6d269eb06891
+{
+Ksrc/main/java/com/io/github/tainafernandes/SchoolProject/entity/Course.java,f\e\fe0739bf87e12b7e2cbdd2835df7423faf2e9316
+†
+Vsrc/main/java/com/io/github/tainafernandes/SchoolProject/SchoolProjectApplication.java,c\4\c4c844358b059d40b6f289c20d9aebbe7973152b
+…
+Usrc/main/java/com/io/github/tainafernandes/SchoolProject/services/StudentService.java,2\d\2d3326310e856599858f39cad777ce2f9bbad8f1
