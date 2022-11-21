@@ -4,6 +4,7 @@ import com.io.github.tainafernandes.SchoolProject.dto.MatterDto;
 import com.io.github.tainafernandes.SchoolProject.entity.Matter;
 import com.io.github.tainafernandes.SchoolProject.repositories.MatterRepository;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -14,6 +15,8 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class MatterService {
+
+    private final ModelMapper mapper;
 
     private final MatterRepository repository;
 
@@ -26,9 +29,7 @@ public class MatterService {
     }
 
     public Object create(MatterDto matterDto) {
-        Matter matter = new Matter();
-        matter.setName(matterDto.getName());
-        return repository.save(matter);
+        return repository.save(mapper.map(matterDto, Matter.class));
     }
 
     public Object update(MatterDto matterDto, Long id) {
@@ -38,10 +39,7 @@ public class MatterService {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Matter not found!");
         }
 
-        Matter matter = matterOptional.get();
-        matter.setName(matterDto.getName());
-
-        return repository.save(matter);
+        return repository.save(mapper.map(matterDto, Matter.class));
     }
 
 

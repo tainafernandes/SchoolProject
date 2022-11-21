@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import org.modelmapper.ModelMapper;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,6 +18,8 @@ import java.util.Optional;
 @RequestMapping("/students")
 public class StudentController {
     private final StudentService service;
+
+    private final ModelMapper mapper;
 
     @GetMapping(value = "{id}")
     public Optional<Student> findById(@PathVariable Long id){
@@ -35,7 +38,7 @@ public class StudentController {
 
     @PutMapping(value = "{id}")
     public ResponseEntity update (@PathVariable("id") Long id, @RequestBody @Valid UpdateStudentDto updateDto){
-        return ResponseEntity.ok(service.update(updateDto, id));
+        return ResponseEntity.ok(mapper.map(updateDto, Student.class));
     }
 
     @DeleteMapping(value = "{id}")

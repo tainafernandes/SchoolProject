@@ -4,6 +4,7 @@ import com.io.github.tainafernandes.SchoolProject.dto.CourseDto;
 import com.io.github.tainafernandes.SchoolProject.entity.Course;
 import com.io.github.tainafernandes.SchoolProject.repositories.CourseRepository;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -15,6 +16,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class CourseService {
 
+    private final ModelMapper mapper;
     private final CourseRepository repository;
 
     public Optional<Course> findById(Long id){
@@ -26,9 +28,7 @@ public class CourseService {
     }
 
     public Object create(CourseDto courseDto) {
-        Course course = new Course();
-        course.setName(courseDto.getName());
-        return repository.save(course);
+        return repository.save(mapper.map(courseDto, Course.class));
     }
 
     public Object update(CourseDto courseDto, Long id) {
@@ -38,10 +38,7 @@ public class CourseService {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Course not found!");
         }
 
-        Course course = courseOptional.get();
-        course.setName(courseDto.getName());
-
-        return repository.save(course);
+        return repository.save(mapper.map(courseDto, Course.class));
     }
 
 
