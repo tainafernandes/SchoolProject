@@ -12,16 +12,8 @@ Vsrc/main/java/com/io/github/tainafernandes/SchoolProject/SchoolProjectApplicati
 ã
 [src/main/java/com/io/github/tainafernandes/SchoolProject/repositories/MatterRepository.java,d\b\db452fd850c4e24f7d55909b057e75c5ef4d0d52
 {
-Ksrc/main/java/com/io/github/tainafernandes/SchoolProject/entity/Matter.java,e\c\eca8856e665bfcefaf5be87a059b4dfb623edbc5
-{
 Ksrc/main/java/com/io/github/tainafernandes/SchoolProject/dto/MatterDto.java,2\9\297e2e09d0d4ef91644958e37f33750da2ac0ce5
 {
 Ksrc/main/java/com/io/github/tainafernandes/SchoolProject/dto/CourseDto.java,e\9\e952e2e14c971e0adb2f4277de5003e4fd1f1ea4
-Å
-Qsrc/main/java/com/io/github/tainafernandes/SchoolProject/entity/Registration.java,c\3\c3ba7ceb66f1aad8d37a2db8af545c60b2cb3818
-{
-Ksrc/main/java/com/io/github/tainafernandes/SchoolProject/entity/Course.java,f\e\fe0739bf87e12b7e2cbdd2835df7423faf2e9316
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-y
-Isrc/main/java/com/io/github/tainafernandes/SchoolProject/entity/Note.java,5\e\5eb710eb6cf4fd95dc1eb181830539a4f83c1c35

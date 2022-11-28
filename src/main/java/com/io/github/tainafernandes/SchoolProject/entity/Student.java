@@ -19,4 +19,7 @@ public class Student {
     private String name;
     private String cpf;
     private String email;
+
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Registration registration;
 }
