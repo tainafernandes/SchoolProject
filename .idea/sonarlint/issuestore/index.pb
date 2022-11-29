@@ -7,13 +7,11 @@ Rsrc/main/java/com/io/github/tainafernandes/SchoolProject/dto/UpdateStudentDto.j
 [src/main/java/com/io/github/tainafernandes/SchoolProject/repositories/CourseRepository.java,4\7\4747e73f508babd2360e0c78f914f505cfdcd556
 ‚
 Rsrc/main/java/com/io/github/tainafernandes/SchoolProject/dto/CreateStudentDto.java,9\e\9e11f4b362592da2d9eff1a1b80e6d269eb06891
-†
-Vsrc/main/java/com/io/github/tainafernandes/SchoolProject/SchoolProjectApplication.java,c\4\c4c844358b059d40b6f289c20d9aebbe7973152b
 ‹
 [src/main/java/com/io/github/tainafernandes/SchoolProject/repositories/MatterRepository.java,d\b\db452fd850c4e24f7d55909b057e75c5ef4d0d52
 {
 Ksrc/main/java/com/io/github/tainafernandes/SchoolProject/dto/MatterDto.java,2\9\297e2e09d0d4ef91644958e37f33750da2ac0ce5
 {
 Ksrc/main/java/com/io/github/tainafernandes/SchoolProject/dto/CourseDto.java,e\9\e952e2e14c971e0adb2f4277de5003e4fd1f1ea4
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+Š
+Zsrc/main/java/com/io/github/tainafernandes/SchoolProject/controllers/CourseController.java,7/9/79afab2a54cb3a7e842c45f23f7fb58c12cd8b6d

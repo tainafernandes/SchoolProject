@@ -1,0 +1,10 @@
+
+E
+java:S3740""/Provide the parametrized type for this generic.(μ±Β
+J
+java:S3740'"/Provide the parametrized type for this generic.(θνκύÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(δ’–ϋύÿÿÿÿ
+r
+java:S1128"\Remove this unused import 'com.io.github.tainafernandes.SchoolProject.dto.CreateStudentDto'.(οχ¤
+r
+java:S1128"\Remove this unused import 'com.io.github.tainafernandes.SchoolProject.dto.UpdateStudentDto'.(φ¶Ά

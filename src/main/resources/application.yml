@@ -1,0 +1,11 @@
+spring:
+    jpa:
+        open-in-view: false
+        database: MYSQL
+        hibernate:
+            ddl-auto: create
+    datasource:
+        username: ${USERNAME}
+        url: ${URL}
+        password: ${PASSWORD}
+
